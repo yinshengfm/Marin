@@ -1,0 +1,147 @@
+body {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    width: 92%;
+    margin: 0 auto;
+    font-size: .5rem;
+    text-align: center;
+    position: relative;
+}
+form,.biaodan > img {
+    overflow:auto;
+    width: 94%;
+    margin: 0 3%;
+}
+
+.biaodan ul {
+    font-weight: bold;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.biaodan ul li {
+    margin: 0 auto;
+    text-align: left;
+    color: #333;
+    font-size: 0.3rem;
+    font-weight: bold;
+    line-height: 1.1rem;
+    padding: .0rem;
+}
+
+.biaodan input, #xiangmu2 {
+    display: inline-block;
+    height: 0.6rem;
+    border: 1px solid #999;
+    background: #fff;
+    text-align: left;
+    width: 50%;
+    padding: 0px .15rem;
+    font-size: 0.3rem;
+    line-height: 0.7rem;
+    color: #333;
+    border-radius: .06rem;
+
+}
+
+.biaodan ul li span {
+    display: block;
+    float: left;
+    text-align: left;
+    width: 25%;
+}
+
+.biaodan ul li .san {
+    width: 10%;
+}
+
+.biaodan ul li .nan {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 40%;
+}
+
+.biaodan ul li .nan input {
+    display: block;
+    float: left;
+    margin-top: 3%;
+    width: 18%;
+}
+
+.tijiao {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: 0.8rem;
+    font-size: 0.36rem;
+    font-weight: bold;
+    border-radius: 0.06rem;
+    line-height: .8rem;
+    background: #C00;
+    text-align: center;
+    color: #fff;
+    margin-top: 5%;
+}
+
+.biaodan ul li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.biaodan ul li strong {
+    color: #C00;
+}
+
+.table-c table {
+    border: none;
+    font-size: .3rem;
+    line-height: .6rem;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.table-c table td {
+    padding: 0 .1rem;
+    height: 40px;
+}
+
+.table-c table td strong {
+    color: #C00;
+}
+
+.tips {
+    font-size: 14px;
+    line-height: .3rem;
+    font-family: "å¾®è½¯é›…é»‘";
+}
+
+.sex_wrap {
+    display: flex;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    width: 22%;
+}
+ul li:nth-child(2) input[type="number"] {
+    width: 15%;
+}

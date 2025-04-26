@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="体育四项算分系统">
+    <meta name="Keywords" content="体育四项算分系统,算分系统">
+    <title>体育四项算分系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/getscore.js"></script>
+    <script src="./js/getscore_zong.js"></script>
+    <style>
+        table {
+            position: relative;
+        }
+
+        table::after {
+            content: "";
+            background: url('images/rdty.png');
+            background-repeat: no-repeat;
+            background-size: 100%, 100%;
+            top: 0;
+            left: 0;
+            bottom: 100px;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            background-position: center center;
+        }
+
+        body::after {
+            content: "";
+            background: url('images/BAK.jpg');
+            background-size: 100%, 100%;
+            opacity: 0.2;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="content content_new" style="font-size: 10px;">
+        <div class="biaodan" id="chengji">
+            <h2>体育四项成绩</h2>
+            <ul>
+                <div class="table-c">
+                    <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tr>
+                            <td>项目</td>
+                            <td>成绩</td>
+                            <td>分值</td>
+                        </tr>
+                        <tr>
+                            <td>100米</td>
+                            <td><span class="xiangmu1V">0s</span></td>
+                            <td><strong class="xiangmu1S">0</strong>分</td>
+                        </tr>
+                        <tr>
+                            <td>800米</td>
+                            <td><span class="xiangmu2V">0</span></td>
+                            <td><strong class="xiangmu2S">0</strong>分</td>
+                        </tr>
+                        <tr>
+                            <td>铅球
+                                <div class="tips">(男:5kg;女:3kg)</div>
+                            </td>
+                            <td><span class="xiangmu3V">0米</span></td>
+                            <td><strong class="xiangmu3S">0</strong>分</td>
+                        </tr>
+                        <tr>
+                            <td>二级蛙跳</td>
+                            <td><span class="xiangmu4V">0米</span></td>
+                            <td><strong class="xiangmu4S">0</strong>分</td>
+                        </tr>
+                        <tr>
+                            <td height="59" colspan="3" align="center">体育四项总成绩：<strong class="zongS">0</strong>分</td>
+                        </tr>
+                        <tr>
+                            <td height="59" colspan="3" align="center">术科折合成绩<span class="tips">(总成绩/100*750)*0.6)</span>：<strong class="zheS">0</strong>分</td>
+                        </tr>
+                        <tr>
+                            <td height="59" colspan="3" align="center">文科成绩<span class="tips"></span>：<strong id="wenkeS">0</strong>分</td>
+                        </tr>
+                        <tr>
+                            <td height="59" colspan="3" align="center">总成绩<span class="tips">(术科折合成绩+0.4*文科成绩）</span>：<strong id="wenkeZongS">0</strong>分</td>
+                        </tr>
+                    </table>
+                </div>
+            </ul>
+            <div class="tijiao" id="shengpaiming">点击这里重新计算</div>
+        </div>
+    </div>
+    <script>
+        // 获取 localStorage 中的成绩数据
+        var formData = JSON.parse(localStorage.getItem('formData'));
+        
+        // 填充数据到页面
+        if (formData) {
+            document.querySelector('.xiangmu1V').textContent = formData.xiangmu1 + '.' + formData.xiangmu1_1 + ' 秒';
+            document.querySelector('.xiangmu2V').textContent = formData.xiangmu2 + ' 分 ' + formData.xiangmu2_2 + ' 秒 ' + formData.xiangmu2_3 + ' 毫秒';
+            document.querySelector('.xiangmu3V').textContent = formData.xiangmu3 + ' 米 ' + formData.xiangmu3_3 + ' 厘米';
+            document.querySelector('.xiangmu4V').textContent = formData.xiangmu4 + ' 米 ' + formData.xiangmu4_4 + ' 厘米';
+        }
+
+        // // 点击查询省内排名
+        // document.getElementById('shengpaiming').addEventListener('click', function() {
+        //     alert('查询省内排名功能尚未实现！');
+        // });
+    </script>
+</body>
+</html>

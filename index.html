@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="体育四项算分系统">
+    <meta name="Keywords" content="体育四项算分系统,算分系统">
+
+    <title>体育四项算分系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    　　
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/count.js"></script>
+    <script src="./js/score.js"></script>
+<!--    <script src="./js/rolldate.js"></script>-->
+</head>
+<body style="background-image: url('images/bak.jpg');background-repeat: no-repeat;background-size: cover;">
+<h2 style="margin-top: -50px;margin-bottom: 0px;">体育四项算分系统</h2>
+<br>
+
+    <img src="images/longjiang.png" style="margin-top: -100px;padding-left: 5%;width: 7rem;height: 4rem;"/>
+<div class="biaodan">
+    <form>
+        <ul id="chengji">
+            <li><span>100米</span>
+                <input class="xiangmu1" name="xiangmu1" value="" type="number" step="1" min="0">
+
+                秒 <input class="xiangmu1" name="xiangmu1_1" value="" type="number" step="1" min="0"> 毫秒
+
+            </li>
+
+            <li><span>800米</span>
+                <input name="xiangmu2" value="" type="number" step="1" min="0" placeholder="0"
+                       oninput="if(value>59)value=59">
+                分
+                <input name="xiangmu2_2" value="" type="number" step="1" min="0" placeholder="00"
+                       oninput="if(value>59)value=59">
+                秒
+                <input name="xiangmu2_3" value="" type="number" step="1" min="0" placeholder="0"
+                       oninput="if(value>9)value=9">
+            </li>
+
+            <li><span>铅球</span>
+                <input name="xiangmu3" value="" type="number" step="1" min="0">
+                米
+                <input name="xiangmu3_3" value="" type="number" step="1" min="0">
+                厘米
+            </li>
+
+            <li><span>二级蛙跳</span>
+                <input name="xiangmu4" value="" type="number" step="1" min="0">
+                米 <input name="xiangmu4_4" value="" type="number" step="1" min="0">
+                厘米
+            </li>
+
+            <li>
+                <span>性别</span>
+                <div class="sex_wrap">
+                    <div class="nan">
+                        <input name="sex" type="radio" value="1" id="nan" checked>
+                        &nbsp;&nbsp;男生
+                    </div>
+                    <div class="nan">
+                        <input name="sex" type="radio" value="2" id="nv">
+                        &nbsp;&nbsp;女生
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="tijiao">立即提交</div>
+    </form>
+    <img src="images/logo.png" style="margin-top: 3%;"/>
+</div>
+</body>
+</html>
